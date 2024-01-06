@@ -56,7 +56,6 @@ const Header = () => {
     useEffect(() => {
         if (user) {
             dispatch(getCartData(user.email));
-            console.log("hi")
         }
     }, []);
 

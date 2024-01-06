@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateCart } from '../utils/firebaseFunctions'
 import cart from '../assets/emptyCart.svg'
@@ -9,6 +9,7 @@ const CartConatiner = () => {
 
     const { cartData } = useSelector(state => state.getCartDatareducer)
     const { user } = useSelector((state) => state.userReducer);
+    const [count, setCount] = useState(0)
 
     const dispatch = useDispatch()
 
@@ -29,7 +30,7 @@ const CartConatiner = () => {
         if (user) {
             dispatch(getCartData(user.email))
         }
-    }, [addQuantity])
+    }, [count])
 
     return (
         <div className='md:w-[30%] sm:w-[50%] w-[85%] bg-white min-h-screen'>
@@ -53,7 +54,7 @@ const CartConatiner = () => {
                                 </div>
                                 <div className=' flex flex-col'>
                                     <p className='font-medium text-right'> ₹{item.price}</p>
-                                    <button className='mt-auto text-cartNumBg' onClick={() => updateCart(item, user.email, "remove")}>remove</button>
+                                    <button className='mt-auto text-cartNumBg' onClick={() => { updateCart(item, user.email, "remove"); setCount(count + 1) }}>remove</button>
                                 </div>
                             </div>
                         </div>
