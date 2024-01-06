@@ -143,7 +143,7 @@ const ProductsByCategory = () => {
                                         <div key={index} className='border cardx mb-14 w-full bg-primary drop-shadow-lg rounded-lg backdrop-blur-lg hover:shadow-xl'>
                                             <div className='w-full flex justify-between items-center relative'>
                                                 <div className='absolute sm:w-[9rem] w-[7.6rem]'>
-                                                    <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-5 ' />
+                                                    <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-5 ' loading='lazy' />
                                                 </div>
                                                 <span className='text-right ms-auto cursor-pointer pt-5'>
                                                     <MdShoppingBasket className='text-3xl text-right me-2 bg-cartNumBg text-white p-1 rounded-full' />
