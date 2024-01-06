@@ -1,7 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from "swiper/modules"
-import { motion } from 'framer-motion';
 import Ice from "../assets/i1.png"
 import Berry from '../assets/berry.png'
 import Veg from '../assets/veg.png'
@@ -43,7 +42,7 @@ const CategoryContainer = () => {
             >
                 <SwiperSlide className='shadow-md rounded-lg h-[10rem] drop-shadow-lg'>
                     <NavLink to={'/categories/ice-creams'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className='sm:w-36 w-28'>
                                 <img src={Ice} alt="" className='-mt-14 -ms-2 -rotate-[12deg] image' />
                             </div>
@@ -51,12 +50,12 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Ice Cream</p>
                                 <p className='text-sm text-gray-600'>Chocolate & Vanilla</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
                 <SwiperSlide className='border h-[10rem] shadow-md rounded-lg  drop-shadow-lg'>
                     <NavLink to={'/categories/fruits'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className='sm:w-48 w-40'>
                                 <img src={Berry} alt="fruits" className='-mt-[3.5rem] -ms-6 rotate-[20deg]' />
                             </div>
@@ -64,12 +63,12 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Fruits</p>
                                 <p className='text-sm text-gray-600'>Fresh & Healthy</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
                 <SwiperSlide className='border h-[10rem] shadow-md rounded-lg  drop-shadow-lg'>
                     <NavLink to={'/categories/chocolates'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex justify-end relative flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex justify-end relative flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className='absolute w-[7rem] sm:w-[8.5rem] -top-[55%]'>
                                 <img src={Chocolate} alt="chocolate" className=' h-full -ms-6 -rotate-[37deg] ' />
                             </div>
@@ -77,12 +76,12 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Chocolates</p>
                                 <p className='text-sm text-gray-600'>Sweet & Yummy</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
                 <SwiperSlide className='border h-[10rem] shadow-md rounded-lg drop-shadow-lg'>
                     <NavLink to={'/categories/vegetables'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className='w-[10.5rem] sm:w-48'>
                                 <img src={Veg} alt="fruits" className='sm:-mt-[3.8rem] -mt-[3.1rem] -ms-6 -rotate-[16deg]' />
                             </div>
@@ -90,12 +89,12 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Vegetables</p>
                                 <p className='text-sm text-gray-600'>Delicious & Tasty</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
                 <SwiperSlide className='border h-[10rem] shadow-md rounded-lg drop-shadow-lg'>
                     <NavLink to={'/categories/curries'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className=' w-32'>
                                 <img src={CU3} alt="fruits" className='-mt-[2.7rem] -ms-2 -rotate-[16deg]' />
                             </div>
@@ -103,12 +102,12 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Curries</p>
                                 <p className='text-sm text-gray-600'>Delicious & Tasty</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
                 <SwiperSlide className='border h-[10rem] shadow-md rounded-lg drop-shadow-lg'>
                     <NavLink to={'/categories/drinks'}>
-                        <motion.div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
+                        <div whileTap={{ scale: 0.96 }} className='flex flex-col gap-1 backdrop-blur-md bg-cardOverlay h-full rounded-lg'>
                             <div className=' w-32'>
                                 <img src={Drinks} alt="fruits" className='-mt-[4.3rem]  -ms-6 rotate-[5deg]' />
                             </div>
@@ -116,7 +115,7 @@ const CategoryContainer = () => {
                                 <p className='text-xl font-semibold text-gray-800'>Drinks</p>
                                 <p className='text-sm text-gray-600'>Soft & Cool</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </NavLink>
                 </SwiperSlide>
             </Swiper>

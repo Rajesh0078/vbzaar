@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { CreateConatainer, Header, MainContainer } from './components'
 import { Route, Routes } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
 import './Main.css'
 import { Offers, Products, ProductsByCategory } from './pages'
 import { ToastContainer } from "react-toastify"
@@ -20,21 +19,20 @@ const App = () => {
         }
     }, [])
     return (
-        <AnimatePresence>
-            <div className='flex flex-col bg-primary'>
-                <Header />
-                <ToastContainer autoClose={1500} />
-                <main className='mt-[4.5rem] md:mt-20 w-full md:px-16 px-4'>
-                    <Routes>
-                        <Route path='/' element={<MainContainer />} />
-                        <Route path='/createitem' element={<CreateConatainer />} />
-                        <Route path='/products' element={<Products />} />
-                        <Route path='/offers' element={<Offers />} />
-                        <Route path='/categories/:category' element={<ProductsByCategory />} />
-                    </Routes>
-                </main>
-            </div>
-        </AnimatePresence>
+
+        <div className='flex flex-col bg-primary'>
+            <Header />
+            <ToastContainer autoClose={1500} />
+            <main className='mt-[4.5rem] md:mt-20 w-full md:px-16 px-4'>
+                <Routes>
+                    <Route path='/' element={<MainContainer />} />
+                    <Route path='/createitem' element={<CreateConatainer />} />
+                    <Route path='/products' element={<Products />} />
+                    <Route path='/offers' element={<Offers />} />
+                    <Route path='/categories/:category' element={<ProductsByCategory />} />
+                </Routes>
+            </main>
+        </div>
     )
 }
 

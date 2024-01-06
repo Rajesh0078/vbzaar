@@ -1,7 +1,6 @@
 import React from 'react'
 import Delivery from "../assets/delivery.png"
 import HeroBg from "../assets/heroBg.png"
-import { motion } from "framer-motion"
 import { homeData } from '../utils/data'
 
 const HomeContainer = () => {
@@ -19,7 +18,7 @@ const HomeContainer = () => {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt aspernatur quod incidunt doloremque, ab qui, ratione illum, omnis
                     inventore saepe sit? Provident mollitia molestias incidunt rem ipsam debitis autem illum?
                 </p>
-                <motion.button whileTap={{ scale: 0.8 }} type='button' className='shadow-xl bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto py-2 px-4 my-2 font-medium rounded-xl'>Order Now</motion.button>
+                <button type='button' className='shadow-xl bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto py-2 px-4 my-2 font-medium rounded-xl'>Order Now</button>
             </div>
             <div className="relative ">
                 <div className='md:h-[35.5rem] h-[26rem] ml-auto w-full'>

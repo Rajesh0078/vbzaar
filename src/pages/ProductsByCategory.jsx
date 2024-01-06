@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MdFilterAlt, MdMoveDown, MdOutlineSearch, MdShoppingBasket } from "react-icons/md"
 import { getItems, updateCart } from '../utils/firebaseFunctions'
-import { motion } from 'framer-motion'
 import Loader from "../components/Loader"
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
@@ -122,15 +121,15 @@ const ProductsByCategory = () => {
                                                 <div className='absolute sm:w-[9rem] w-[7.6rem]'>
                                                     <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-5 ' />
                                                 </div>
-                                                <motion.span whileTap={{ scale: 0.8 }} className='text-right ms-auto cursor-pointer pt-5'>
+                                                <span className='text-right ms-auto cursor-pointer pt-5'>
                                                     <MdShoppingBasket className='text-3xl text-right me-2 bg-cartNumBg text-white p-1 rounded-full' />
-                                                </motion.span>
+                                                </span>
                                             </div>
                                             <div className='flex items-center px-4 py-1 flex-col mt-10'>
                                                 <p className='text-md font-semibold text-headingColor text-center textx w-full'>{item.name}</p>
                                                 <p className='text-[.57rem] text-center py-1 text-textColor'>{item.description}</p>
                                                 <p>₹ {item.price}</p>
-                                                <motion.button whileTap={{ scale: 0.86 }} className='w-full py-1 bg-cartNumBg text-white rounded-full my-2 text-sm' onClick={() => cartAddHandler(item)}>Add to cart</motion.button>
+                                                <button className='w-full py-1 bg-cartNumBg text-white rounded-full my-2 text-sm' onClick={() => cartAddHandler(item)}>Add to cart</button>
                                             </div>
                                         </div>
                                     ))
@@ -146,15 +145,15 @@ const ProductsByCategory = () => {
                                                 <div className='absolute sm:w-[9rem] w-[7.6rem]'>
                                                     <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-5 ' />
                                                 </div>
-                                                <motion.span whileTap={{ scale: 0.8 }} className='text-right ms-auto cursor-pointer pt-5'>
+                                                <span className='text-right ms-auto cursor-pointer pt-5'>
                                                     <MdShoppingBasket className='text-3xl text-right me-2 bg-cartNumBg text-white p-1 rounded-full' />
-                                                </motion.span>
+                                                </span>
                                             </div>
                                             <div className='flex items-center px-4 py-1 flex-col mt-10'>
                                                 <p className='text-md font-semibold text-headingColor text-center textx w-full'>{item.name}</p>
                                                 <p className='text-[.57rem] text-center py-1 text-textColor'>{item.description}</p>
                                                 <p>₹ {item.price}</p>
-                                                <motion.button whileTap={{ scale: 0.86 }} className='w-full py-1 bg-cartNumBg text-white rounded-full my-2 text-sm'>Add to cart</motion.button>
+                                                <button className='w-full py-1 bg-cartNumBg text-white rounded-full my-2 text-sm'>Add to cart</button>
                                             </div>
                                         </div>
                                     ))

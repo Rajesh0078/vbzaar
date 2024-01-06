@@ -10,7 +10,6 @@ import {
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../firebase.config";
-import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartData, userAction } from "../store/actions/userAction";
@@ -159,35 +158,30 @@ const Header = () => {
                                     className="flex items-center gap-2"
                                     onClick={() => (isMenu ? setIsMenu(false) : setIsMenu(true))}
                                 >
-                                    <motion.p className="hover:text-headingColor font-semibold">
+                                    <p className="hover:text-headingColor font-semibold">
                                         {user.displayName}
-                                    </motion.p>
-                                    <motion.div whileTap={{ scale: 0.6 }}>
+                                    </p>
+                                    <div>
                                         <img
                                             src={user.photoURL}
                                             alt="avatar"
                                             referrerPolicy="no-referrer"
                                             className="w-7 rounded-full"
                                         />
-                                    </motion.div>
+                                    </div>
                                 </div>
                                 {isMenu && (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.6 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.6 }}
+                                    <div
                                         className="absolute bg-white w-[12rem] px-3 p-2 rounded-lg shadow-2xl top-9 right-0"
                                     >
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        <div
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdSettings className="inline text-2xl text-textColor mr-2 my-2" />{" "}
                                             Settings
-                                        </motion.div>
+                                        </div>
                                         {user && user.email === "sairajesh991@gmail.com" && (
-                                            <motion.div
-                                                whileTap={{ scale: 0.8 }}
+                                            <div
                                                 className=" hover:bg-gray-100 rounded-lg px-2"
                                             >
                                                 <NavLink
@@ -197,32 +191,30 @@ const Header = () => {
                                                     <MdAdd className="inline text-2xl text-textColor mr-2 my-2" />
                                                     Create Item
                                                 </NavLink>
-                                            </motion.div>
+                                            </div>
                                         )}
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        <div
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdPerson className="inline  text-2xl text-textColor mr-2 my-2" />
                                             Profile
-                                        </motion.div>
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        </div>
+                                        <div
                                             onClick={logoutHandler}
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdLogout className="inline  text-2xl text-textColor mr-2 my-2" />
                                             Logout
-                                        </motion.div>
-                                    </motion.div>
+                                        </div>
+                                    </div>
                                 )}
                             </div>
                         ) : (
                             <div className="flex items-center cursor-pointer" onClick={login}>
                                 <p className="hover:text-headingColor">Login</p>
-                                <motion.div whileTap={{ scale: 0.6 }}>
+                                <div >
                                     <MdPerson className="text-3xl" />
-                                </motion.div>
+                                </div>
                             </div>
                         )}
                     </div>
@@ -380,22 +372,17 @@ const Header = () => {
                                     </p>
                                 </div>
                                 {isMenu && (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.6 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.6 }}
+                                    <div
                                         className="absolute bg-white w-[12rem] px-3 p-2 rounded-lg shadow-2xl top-9 right-0"
                                     >
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        <div
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdSettings className="inline text-2xl text-textColor mr-2 my-2" />{" "}
                                             Settings
-                                        </motion.div>
+                                        </div>
                                         {user && user.email === "sairajesh991@gmail.com" && (
-                                            <motion.div
-                                                whileTap={{ scale: 0.8 }}
+                                            <div
                                                 className="hover:bg-gray-100 rounded-lg px-2"
                                             >
                                                 <NavLink
@@ -405,31 +392,29 @@ const Header = () => {
                                                     <MdAdd className="inline text-2xl text-textColor mr-2 my-2" />
                                                     Create Item
                                                 </NavLink>
-                                            </motion.div>
+                                            </div>
                                         )}
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        <div
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdPerson className="inline  text-2xl text-textColor mr-2 my-2" />{" "}
                                             Profile
-                                        </motion.div>
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
+                                        </div>
+                                        <div
                                             onClick={logoutHandler}
                                             className="hover:bg-gray-100 rounded-lg px-2"
                                         >
                                             <MdLogout className="inline  text-2xl text-textColor mr-2 my-2" />
                                             Logout
-                                        </motion.div>
-                                    </motion.div>
+                                        </div>
+                                    </div>
                                 )}
                             </div>
                         ) : (
                             <div className="flex items-center cursor-pointer" onClick={login}>
-                                <motion.div whileTap={{ scale: 0.6 }}>
+                                <div >
                                     <MdPerson className="text-3xl" />
-                                </motion.div>
+                                </div>
                                 <p className="hover:text-headingColor">Login</p>
                             </div>
                         )}

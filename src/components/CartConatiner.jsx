@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateCart } from '../utils/firebaseFunctions'
 import cart from '../assets/emptyCart.svg'
 import { getCartData } from '../store/actions/userAction'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const CartConatiner = () => {
@@ -62,10 +61,8 @@ const CartConatiner = () => {
                         <div className='p-10'>
                             <img src={cart} alt="empty cart" />
                             <p className='text-center pt-10 font-medium text-xl'>Cart is Empty
-                                <motion.span
-                                    animate={{ pathLength: 1 }}
-                                    transition={{ duration: 2, type: "tween" }}
-                                >😞</motion.span></p>
+                                <span
+                                >😞</span></p>
                         </div>
                     </>
                     }
