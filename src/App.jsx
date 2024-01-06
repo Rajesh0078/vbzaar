@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { CreateConatainer, Header, MainContainer } from './components'
 import { Route, Routes } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import './App.css'
+import '.pp.css'
 import { Offers, Products, ProductsByCategory } from './pages'
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
