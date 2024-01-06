@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+/* header css */
+
+.nav_text{
+    cursor: pointer;
+    transition-duration: 500ms;
+    transition: all ease-in-out;
+}
+button:disabled{
+    background-color: gray;
+    cursor: not-allowed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hx2::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    display: none;
+}
+.cart_scroll::-webkit-scrollbar{
+    display: none;
+}
+.image{
+    filter: drop-shadow(-10px 20px  20px rgba(99, 71, 71, 0.167));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.swiper-button-prev{
+    top: -68.5% !important;
+    right: 10% !important;
+    left: 80% !important;
+    z-index: 1000 !important;
+}
+.swiper-button-prev::after{
+    font-size: 1rem !important;
+    font-weight: bold;
+    color: #e80013;
+}
+.swiper-button-next{
+    top: -68.5% !important;
+    right: 0% !important;
+    left: 90% !important;
+    z-index: 1000 !important;
+}
+.swiper-button-next::after{
+    font-size: 1rem !important;
+    font-weight: bold;
+    color: #e80013;
+}
+.swiper{
+    overflow: visible !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (min-width:780px) {
+    .swiper-button-next{
+        left: 98% !important;
+    }
+    .swiper-button-prev{
+        left: 95% !important;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width:377px) {
+    .card{
+        width: 8rem;
+    }
+    .card img{
+        margin-top: -4rem;
+    }
+    .card p{
+        font-size: .8rem;
+    }
+    html{
+        font-size: 85%;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textx{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+
+
+/* cards css */
+.cardx{
+    width: calc(100% / 2 - .5rem );
+}
+
+@media screen and (min-width:530px) {
+    .cardx{
+        width: calc(100% / 3 - 1rem );
+    }
+}
+@media screen and (min-width:1200px) {
+    .cardx{
+        width: calc(100% / 5 - 1.3rem );
+    }
 }
