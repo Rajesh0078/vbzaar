@@ -75,7 +75,7 @@ const CartConatiner = () => {
                             <p className=' font-semibold'>₹{cartData.cart && cartData.cart.reduce((acc, next) => { return acc + next.price }, 0)}</p>
                         </div>
                         <div className='mt-2 text-sm'>
-                            Address: KING habvhugcvghc   gcyc
+                            Address:
                         </div>
                         <button className='text-center w-full  py-[.3rem] mt-3 rounded-lg text-md bg-cartNumBg text-primary'>CheckOut</button>
                         <span className='text-center mt-1 '>or</span>

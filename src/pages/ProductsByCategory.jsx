@@ -19,6 +19,7 @@ const ProductsByCategory = () => {
         await getItems(pathname.split('/')[2]).then((data) => {
             setdata(data)
         })
+
     }
 
     const searchHandler = (e) => {
@@ -43,14 +44,14 @@ const ProductsByCategory = () => {
             dispatch(getCartData(user.email))
         }
     }
-
     useEffect(() => {
         document.title = `${pathname.split('/')[2]} - VBzaar`
         fetchData()
+        window.scrollTo(0, 0)
     }, [pathname])
 
     return (
-        <div className='min-h-screen -mt-20 pt-[5.8rem] w-full md:pt-[5.5rem]'>
+        <div className='min-h-screen -mt-20 pt-[5.8rem] w-full md:pt-[5.5rem] pb-6'>
             <div className='w-full flex md:justify-between items-center'>
                 <div className=' text-textColor text-md md:block hidden'>
                     <Link to={'/'}>Home</Link> &gt; categories &gt; {pathname.split('/')[2]}
@@ -60,7 +61,7 @@ const ProductsByCategory = () => {
                     <label htmlFor="search"><MdOutlineSearch className='text-3xl text-gray-700 me-2' /></label>
                 </div>
             </div>
-            <div className='w-full flex mt-4 items-center gap-1 md:hidden'>
+            {/* <div className='w-full flex mt-4 items-center gap-1 md:hidden'>
                 <span className='text-base font-semibold text-headingColor me-1'> Filters:</span>
                 <div className='flex gap-1 overflow-x-auto overflow-y-hidden hx2 py-2 w-full'>
                     <select name="sort" id="sort" className='outline-none p-1 shadow bg-primary rounded-full border text-sm font-medium text-textColor'>
@@ -78,8 +79,8 @@ const ProductsByCategory = () => {
                     <label htmlFor="selling" className='p-1 px-3 shadow min-w-[7.5rem] bg-primary text-center rounded-full border text-sm font-medium text-textColor '>Top Selling</label>
                 </div>
 
-            </div>
-            <div className='w-full mt-10 flex justify-center gap-8'>
+            </div> */}
+            <div className='w-full mt-5 flex justify-center gap-8'>
                 <div className='hidden md:block basis-1/4 lg:basis-1/5 shadow-sm drop-shadow-lg rounded-md bg-primary '>
                     <div>
                         <p className='text-xl font-semibold text-black border-b-2 p-3 flex justify-between'>Filters : <MdFilterAlt className='text-2xl text-cartNumBg' /></p>
@@ -118,8 +119,8 @@ const ProductsByCategory = () => {
                                     data && data.map((item, index) => (
                                         <div key={index} className='border cardx mb-14 w-full bg-primary drop-shadow-lg rounded-lg backdrop-blur-lg hover:shadow-xl'>
                                             <div className='w-full flex justify-between items-center relative'>
-                                                <div className='absolute sm:w-[9rem] w-[7.6rem]'>
-                                                    <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-5 ' />
+                                                <div className='absolute sm:w-[9rem] w-[6.8rem]'>
+                                                    <img src={item.img_url} alt="king" className='object-cover w-full h-full -mt-3 -ms-1 ' />
                                                 </div>
                                                 <span className='text-right ms-auto cursor-pointer pt-5'>
                                                     <MdShoppingBasket className='text-3xl text-right me-2 bg-cartNumBg text-white p-1 rounded-full' />

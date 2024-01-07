@@ -12,6 +12,7 @@ import CU3 from "../assets/cu3.png"
 import { NavLink } from 'react-router-dom';
 
 const CategoryContainer = () => {
+
     return (
         <div className='w-full category flex flex-col justify-start  my-3'>
             <p className='text-2xl font-medium text-textColor pb-[6rem] md:text-center'>Our Top <span className='text-2xl text-cartNumBg font-semibold'>Categories</span></p>

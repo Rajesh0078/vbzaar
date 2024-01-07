@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { CreateConatainer, Header, MainContainer } from './components'
+import { CreateConatainer, Footer, Header, MainContainer } from './components'
 import { Route, Routes } from 'react-router-dom'
 import './Main.css'
 import { Offers, Products, ProductsByCategory } from './pages'
@@ -17,6 +17,7 @@ const App = () => {
                 document.title = title
             }
         }
+
     }, [])
     return (
 
@@ -27,11 +28,11 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<MainContainer />} />
                     <Route path='/createitem' element={<CreateConatainer />} />
-                    <Route path='/products' element={<Products />} />
                     <Route path='/offers' element={<Offers />} />
                     <Route path='/categories/:category' element={<ProductsByCategory />} />
                 </Routes>
             </main>
+            <Footer />
         </div>
     )
 }

@@ -123,12 +123,12 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
-                        <NavLink
+                        {/* <NavLink
                             to={"/products"}
                             className="text-base text-textColor nav_text hover:text-headingColor"
                         >
                             Products
-                        </NavLink>
+                        </NavLink> */}
                         <NavLink
                             to={"/offers"}
                             className="text-base text-textColor nav_text hover:text-headingColor"
